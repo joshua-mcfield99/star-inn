@@ -68,8 +68,8 @@ const Home = () => {
                     <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Awards</h2>
                     <p>
                         The Star is more than just a pub, it&#39;s a multi-award-winning establishment. For a record-breaking 10 years,
-                        we have proudly held the title of CAMRA Regional Cider Pub in Surrey and Hampshire, as well as recently
-                        being awarded the Surrey and Sussex Cider Pub of the Year 2023.
+                        we have proudly held the title of Surrey and Hants borders Cider pub of the year, as well as recently
+                        being awarded the regional Surrey and Sussex CAMRA Cider Pub of the Year 2023.
                     </p>
                     <p>
                         We were first featured in the CAMRA Good Beer Guide in 2007 and have since continued to excel in our
