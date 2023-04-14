@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 import { Cormorant_Unicase } from 'next/font/google'
+import MenuPdf from '@/components/MenuPdf'
+
 
 const cormorantUnicase = Cormorant_Unicase({
     subsets: ['latin'],
@@ -22,7 +24,7 @@ const Food = () => {
 
                 <div>
                     <h2 className={`${'heading'} ${cormorantUnicase.className}`} >menu</h2>
-                    <p><strong>VEGAN</strong> = vegan | <strong>v</strong> = Vegetarian | <strong>g</strong> = Gluten free</p>
+                    <MenuPdf />
                 </div>
             </section>
             <section className='right'>
