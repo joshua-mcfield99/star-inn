@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { Cormorant_Unicase } from 'next/font/google'
+import Image from 'next/image'
 
 const cormorantUnicase = Cormorant_Unicase({
     subsets: ['latin'],
@@ -25,6 +26,14 @@ const Drinks = () => {
                 <p>
                     While we endeavor to maintain an up-to-date bar image, during peak hours, we may not always be able to do so.
                 </p>
+                <div className='livebar'>
+                    <Image
+                        src='/Live bar place holder.jpg'
+                        alt='This is a live picture of our current ales.'
+                        fill='fit'
+                        className={`${'imagefill'}`}
+                    />
+                </div>
             </section>
         </main>
     </>
