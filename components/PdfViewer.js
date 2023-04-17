@@ -1,15 +1,14 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import "react-pdf/dist/esm/Page/TextLayer.css";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css"
+
 
 // Set the URL of the PDF document
-const pdfUrl = '/StarmenuLunchtime2023March.pdf';
+
 
 // Register the worker that will load the PDF document
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function PdfViewer() {
+function PdfViewer({pdfUrl}) {
   const [numPages, setNumPages] = React.useState(null);
   const [pageNumber, setPageNumber] = React.useState(1);
 
@@ -19,12 +18,13 @@ function PdfViewer() {
   }
 
   return (
-    <div>
+    <div className='menu'>
       <Document
         file={pdfUrl}
         onLoadSuccess={onDocumentLoadSuccess}
+        className='document'
       >
-        <Page pageNumber={pageNumber} renderTextLayer={false}/>
+        <Page pageNumber={pageNumber} renderTextLayer={false} className='page'  renderAnnotationLayer={false} />
       </Document>
     </div>
   );
