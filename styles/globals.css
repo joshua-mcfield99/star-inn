@@ -307,6 +307,14 @@ section {
         height: 100%;
     }
 
+    .menu_select {
+        height: fit-content;
+    }
+
+    .menus {
+        width: 40%;
+    }
+
 
 }
 
@@ -317,6 +325,10 @@ section {
 
     p {
         font-size: 0.9rem;
+    }
+
+    .menus {
+        width: 100%;
     }
 }
 
