@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { Cormorant_Unicase } from 'next/font/google'
-import MenuPdf from '@/components/MenuPdf'
+import PdfViewer from '../components/PdfViewer';
 
 
 const cormorantUnicase = Cormorant_Unicase({
@@ -9,13 +9,14 @@ const cormorantUnicase = Cormorant_Unicase({
     weight: '700'
 })
 
+
 const Food = () => {
   return (
     <>
         <Head>
 
         </Head>
-        <main>
+        <main className='food'>
             <section className='left'>
                 <h1 className={`${'heading'} ${cormorantUnicase.className}`} >Food</h1>
                 <p>
@@ -24,7 +25,7 @@ const Food = () => {
 
                 <div>
                     <h2 className={`${'heading'} ${cormorantUnicase.className}`} >menu</h2>
-                    <MenuPdf />
+                    <PdfViewer />
                 </div>
             </section>
             <section className='right'>

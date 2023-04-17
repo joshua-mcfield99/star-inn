@@ -162,6 +162,11 @@ section {
     object-fit: contain;
 }
 
+main.food {
+    display: flex;
+    flex-direction: row;
+}
+
 @media only screen and (max-width: 1220px) {
     
     .welcome {
