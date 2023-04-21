@@ -96,15 +96,28 @@ nav {
 }
 
 
-nav a {
+nav a, nav button {
     color: white;
 
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
     color: antiquewhite;
     text-decoration: underline 1px salmon;
     transition: 500ms;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.panel_link {
+    width: fit-content;
+    margin: 0 0 0 auto;
 }
 
 section {
