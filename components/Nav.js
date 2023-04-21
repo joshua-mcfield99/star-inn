@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import styles from '../styles/Nav.module.css'
 import { Cormorant_Unicase } from 'next/font/google';
 import { Josefin_Sans } from 'next/font/google'
 import AuthContext from '@/context/auth-context';
@@ -32,20 +33,20 @@ const Nav = (props) => {
             {(context) => {
                 return (
                     
-                    <div className='navinner'>
-                        <div className='navlogo'>
+                    <div className={`${styles.nav_inner}`}>
+                        <div className={`${styles.nav_logo}`}>
                             <h1 className={`${cormorantUnicase.className}`}>The Star</h1>
                         </div>
                         {!context.token && (
 
-                            <div className='navlinks'>
-                                <div className='mobilenav'>
-                                    <div className='toggle' onClick={handleToggle}>
-                                        <div className={`${'togglebar'} ${'topbar'} ${openMenu ? 'open' : 'closed'}`}></div>
-                                        <div className={`${'togglebar'} ${'midbar'} ${openMenu ? 'open' : 'closed'}`}></div>
-                                        <div className={`${'togglebar'} ${'botbar'} ${openMenu ? 'open' : 'closed'}`}></div>
+                            <div className={`${styles.nav_links}`}>
+                                <div className={`${styles.mobile_nav}`}>
+                                    <div className={`${styles.toggle}`} onClick={handleToggle}>
+                                        <div className={`${styles.togglebar} ${styles.topbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
+                                        <div className={`${styles.togglebar} ${styles.midbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
+                                        <div className={`${styles.togglebar} ${styles.botbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
                                     </div>
-                                    <div className={`${'mobilelinks'} ${openMenu ? 'open' : 'closed'}`}>
+                                    <div className={`${styles.mobile_links} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}>
                                         <ul>
                                             <li><Link href='/'>Home</Link></li>
                                             <li><Link href='/Drinks'>Drinks</Link></li>
@@ -57,7 +58,7 @@ const Nav = (props) => {
                                         </ul>
                                     </div>
                                 </div>
-                                <ul className='links'>
+                                <ul className={`${styles.links}`}>
                                     <li><Link href='/'>Home</Link></li>
                                     <li><Link href='/Drinks'>Drinks</Link></li>
                                     <li><Link href='/Food'>Food</Link></li>
@@ -69,14 +70,14 @@ const Nav = (props) => {
                             </div>
                         )}
                         {context.token && (
-                            <div className='navlinks'>
-                            <div className='mobilenav'>
-                                <div className='toggle' onClick={handleToggle}>
-                                    <div className={`${'togglebar'} ${'topbar'} ${openMenu ? 'open' : 'closed'}`}></div>
-                                    <div className={`${'togglebar'} ${'midbar'} ${openMenu ? 'open' : 'closed'}`}></div>
-                                    <div className={`${'togglebar'} ${'botbar'} ${openMenu ? 'open' : 'closed'}`}></div>
+                            <div className={`${styles.nav_links}`}>
+                            <div className={`${styles.mobile_nav}`}>
+                                <div className={`${styles.toggle}`} onClick={handleToggle}>
+                                    <div className={`${styles.togglebar} ${styles.topbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
+                                    <div className={`${styles.togglebar} ${styles.midbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
+                                    <div className={`${styles.togglebar} ${styles.botbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
                                 </div>
-                                <div className={`${'mobilelinks'} ${openMenu ? 'open' : 'closed'}`}>
+                                <div className={`${styles.mobile_links} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}>
                                     <ul>
                                         <li><Link href='/Admin/Panel'>Admin Panel</Link></li>
                                         <li><button onClick={props.logout}>Logout</button></li>
