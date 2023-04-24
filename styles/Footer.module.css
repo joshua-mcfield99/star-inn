@@ -67,3 +67,33 @@
 .copyright p {
     color: #FFF;
 }
+
+@media only screen and (max-width: 1080px) {
+    
+    .footer_section {
+        width: 35%;
+        margin-top: 2rem;
+    }
+
+    .main_section {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+@media only screen and (max-width: 850px) {
+
+    .main_section {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .footer_section {
+        width: 50%;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+}

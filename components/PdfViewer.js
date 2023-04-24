@@ -1,6 +1,6 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-
+import styles from '../styles/Food.module.css'
 
 // Set the URL of the PDF document
 
@@ -18,13 +18,13 @@ function PdfViewer({pdfUrl}) {
   }
 
   return (
-    <div className='menu'>
+    <div className={`${styles.menu}`}>
       <Document
         file={pdfUrl}
         onLoadSuccess={onDocumentLoadSuccess}
-        className='document'
+        className={`${styles.document}`}
       >
-        <Page pageNumber={pageNumber} renderTextLayer={false} className='page'  renderAnnotationLayer={false} />
+        <Page pageNumber={pageNumber} renderTextLayer={false} className='page'  renderAnnotationLayer={false} scale={2}/>
       </Document>
     </div>
   );

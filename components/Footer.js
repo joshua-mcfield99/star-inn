@@ -17,7 +17,7 @@ const Footer = () => {
                             <div className={[styles.main_section]}>
                                 <div className={`${styles.logo} ${styles.footer_section}`}>
                                     <Image
-                                        src='/StarLogo.png'
+                                        src='/StarLogo_White.png'
                                         width={300}
                                         height={300}
                                         alt='The Star logo'

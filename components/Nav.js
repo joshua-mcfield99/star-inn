@@ -13,7 +13,8 @@ const josefinSans = Josefin_Sans({
 
 const cormorantUnicase = Cormorant_Unicase({
     subsets: ['latin'],
-    weight: '700'
+    weight: '700',
+    style: 'normal'
 })
 
 
@@ -28,7 +29,7 @@ const Nav = (props) => {
 
 
   return (
-    <nav>
+    <nav className={`${styles.nav}`}>
         <AuthContext.Consumer>
             {(context) => {
                 return (
@@ -48,13 +49,13 @@ const Nav = (props) => {
                                     </div>
                                     <div className={`${styles.mobile_links} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}>
                                         <ul>
-                                            <li><Link href='/'>Home</Link></li>
-                                            <li><Link href='/Drinks'>Drinks</Link></li>
-                                            <li><Link href='/Food'>Food</Link></li>
-                                            <li><Link href='/Events'>Events</Link></li>
-                                            <li><Link href='/Gallery'>Gallery</Link></li>
-                                            <li><Link href='/Contact'>Contact</Link></li>
-                                            <li><Link href='/JoinUs'>Join Us</Link></li>
+                                            <li><Link href='/' onClick={handleToggle}>Home</Link></li>
+                                            <li><Link href='/Drinks' onClick={handleToggle}>Drinks</Link></li>
+                                            <li><Link href='/Food' onClick={handleToggle}>Food</Link></li>
+                                            <li><Link href='/Events' onClick={handleToggle}>Events</Link></li>
+                                            <li><Link href='/Gallery' onClick={handleToggle}>Gallery</Link></li>
+                                            <li><Link href='/Contact' onClick={handleToggle}>Contact</Link></li>
+                                            <li><Link href='/JoinUs' onClick={handleToggle}>Join Us</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -84,7 +85,7 @@ const Nav = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                            <ul className='links'>
+                            <ul className={`${styles.links}`}>
                                 <li className='panel_link'><Link href='/Admin/Panel'>Admin Panel</Link></li>
                                 <li><button className={`${josefinSans.className}`} onClick={context.logout}>Logout</button></li>
                             </ul>

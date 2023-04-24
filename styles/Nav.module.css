@@ -1,3 +1,35 @@
+/*Main Nav bar styling*/
+.nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3rem;
+    box-shadow: 0px 10px 20px #00000042;
+    background-color: black;
+    color: white;
+    z-index: 100;
+}
+
+.nav a, .nav button {
+    color: white;
+
+}
+
+.nav a:hover, .nav button:hover {
+    color: antiquewhite;
+    text-decoration: underline 1px salmon;
+    transition: 500ms;
+}
+
+.nav button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
 .nav_inner {
     height: 65px;
     max-width: 1660px;
@@ -118,5 +150,21 @@
     
     .links {
         display: none;
+    }
+
+    .nav_links {
+        width: 25%;
+        max-width: none;
+        min-width: 50px;
+    }
+
+    .mobile_links {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .nav {
+        margin-bottom: 2rem;
     }
 }

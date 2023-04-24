@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
+import styles from '../styles/Home.module.css'
 import { Cormorant_Unicase } from 'next/font/google'
 
 const cormorantUnicase = Cormorant_Unicase({
@@ -15,9 +16,18 @@ const Home = () => {
 
             </Head>
             <main>
-                <section className={`${'welcome'}`}>
-                    <div className={`${'left'}`}>
-                        <h1 className={`${'heading'} ${cormorantUnicase.className}`}>Welcome!</h1>
+                <section className={`${styles.welcome}`}>
+                    <div className={`${styles.welcome_inner}`}>
+                        <div className={`${styles.home_logo}`}>
+                            <Image
+                                src={'/StarLogo.png'}
+                                alt='The Star Logo'
+                                fill
+                                sizes='(max-width: 4000px)'
+                                className={`${styles.image_fill}`}
+                            />
+                        </div>
+                        <h1 className={`${styles.heading} ${cormorantUnicase.className}`}>Welcome!</h1>
                         <p>
                             The Star has a rich history dating back to 1832, where a charming tavern stood on the very same site. The
                             present building, constructed in the 1700s, has retained its &#39;Olde Worlde&#39; character and charm, making it a
@@ -44,28 +54,19 @@ const Home = () => {
                             So what are you waiting for? Come and join us at The Star and experience the charm and character of this
                             unique tavern!
                         </p>
-                    </div>
-                    <div className={`${'right'}`}>
-                        <div className={`${'homelogo'}`}>
+                        <div className={`${styles.welcome_img}`}>
                             <Image
-                                src={'/StarLogo.png'}
-                                alt='The Star Logo'
-                                fill
-                                className={`${'imagefill'}`}
-                            />
-                        </div>
-                        <div className={`${'welcomeimg'}`}>
-                            <Image
-                                src={'/team.png'}
+                                src={'/team.jpg'}
                                 alt='The Star staff'
                                 fill
-                                className={`${'imagefill'}`}
+                                sizes='(max-width: )'
+                                className={`${styles.image_fill}`}
                             />
                         </div>
                     </div>
                 </section>
                 <section>
-                    <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Awards</h2>
+                    <h2 className={`${styles.heading} ${cormorantUnicase.className}`} >Awards</h2>
                     <p>
                         The Star is more than just a pub, it&#39;s a multi-award-winning establishment. For a record-breaking 10 years,
                         we have proudly held the title of Surrey and Hants borders Cider pub of the year, as well as recently

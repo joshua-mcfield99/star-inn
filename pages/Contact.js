@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import styles from '../styles/Contact.module.css'
 import { Cormorant_Unicase } from 'next/font/google'
 
 const cormorantUnicase = Cormorant_Unicase({
@@ -15,8 +16,8 @@ const Contact = () => {
             </Head>
             <main>
                 <section>
-                    <h1 className={`${'heading'} ${cormorantUnicase.className}`} >Contact</h1>
-                    <h2 className={`${'heading'} ${cormorantUnicase.className}`}>Loaction</h2>
+                    <h1 className={`${styles.heading} ${cormorantUnicase.className}`} >Contact</h1>
+                    <h2 className={`${styles.heading} ${cormorantUnicase.className}`}>Loaction</h2>
                     <p>
                         Nestled in the heart of the enchanting town of Godalming, Surrey, lies The Star inn - a true gem amongst the historic buildings and scenic views. As you wander down Church Street, keep an eye out for the distinctive pepper pot, and you&#39;ll find The Star just a stone&#39;s throw away. With its charming ambiance and welcoming atmosphere, The Star is the perfect place to relax and indulge in some delicious food and drinks after a day of exploring the town&#39;s stunning surroundings.
                     </p>
@@ -24,7 +25,7 @@ const Contact = () => {
                 </section>
                 <section>
                     <div>
-                        <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Contact details</h2>
+                        <h2 className={`${styles.heading} ${cormorantUnicase.className}`} >Contact details</h2>
                         <h3>Address:</h3>
                         <p>
                             17 Church Street
@@ -41,7 +42,7 @@ const Contact = () => {
                         </p>
                     </div>
                     <div>
-                        <h2 className={`${'heading'}`} >Get in touch</h2>
+                        <h2 className={`${styles.heading} ${cormorantUnicase.className}`} >Get in touch</h2>
                         <p>
                             We&#39;d love to hear from you! Whether you&#39;re looking to book a table or simply have a question about The Star, we&#39;re here to help. Just fill out the form below and our friendly team will get back to you as soon as possible with all the information you need.
                         </p>
