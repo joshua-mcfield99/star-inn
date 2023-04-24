@@ -29,7 +29,7 @@ const Drinks = () => {
                 </p>
                 <div className={`${styles.live_img}`}>
                     <Image
-                        src='/Live bar place holder.jpg'
+                        src='/Livebarplaceholder.jpg'
                         alt='This is a live picture of our current ales.'
                         fill
                         className={`${styles.img_fill}`}
