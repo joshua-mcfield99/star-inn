@@ -31,7 +31,7 @@ const Drinks = () => {
                     <Image
                         src='/Live bar place holder.jpg'
                         alt='This is a live picture of our current ales.'
-                        fill='fit'
+                        fill
                         className={`${styles.img_fill}`}
                     />
                 </div>
