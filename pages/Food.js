@@ -22,12 +22,12 @@ const Food = () => {
         </Head>
         <main className={`${styles.food}`}>
             <section>
-                <h1 className={`${styles.heading} ${cormorantUnicase.className}`} >Food</h1>
+                <h1 className={`${'heading'} ${cormorantUnicase.className}`} >Food</h1>
                 <p>
                     Indulge in our mouth-watering pub food that is all freshly prepared in-house with locally-sourced ingredients. Our Sunday roast is simply legendary and will leave your taste buds singing with joy! Don&#39;t just take our word for it, check out our gallery for some tantalizing pictures that will make you want to visit us right away.
                 </p>
                 <div className={`${styles.kitchen_hours}`}>
-                    <h2 className={`${styles.heading} ${cormorantUnicase.className}`} >Kitchen Hours</h2>
+                    <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Kitchen Hours</h2>
                     <ul>
                     
                         <li>
@@ -50,7 +50,7 @@ const Food = () => {
                 </div>
 
                 <div className={`${styles.menus_container}`}>
-                    <h2 className={`${styles.heading} ${cormorantUnicase.className}`} >Menu</h2>
+                    <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Menu</h2>
                     <p>Click a menu for an enlarged view.</p>
                     <div className={`${styles.menu_select}`}>
                         <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/StarmenuLunchtime2023March.pdf')}}>

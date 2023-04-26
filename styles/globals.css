@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h3 {
@@ -46,6 +46,11 @@ main {
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
+}
+
+.heading  {
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 .panel_link {

@@ -1,0 +1,34 @@
+.event_list_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.event_card_list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.event_card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event_card h3 {
+    margin-bottom: 2rem;
+}
+
+.date {
+    margin: 0 0 0 auto;
+}
+
+.description {
+    width: 90%;
+}

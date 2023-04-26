@@ -27,7 +27,7 @@ const Home = () => {
                                 className={`${styles.image_fill}`}
                             />
                         </div>
-                        <h1 className={`${styles.heading} ${cormorantUnicase.className}`}>Welcome!</h1>
+                        <h1 className={`${'heading'} ${cormorantUnicase.className}`}>Welcome!</h1>
                         <p>
                             The Star has a rich history dating back to 1832, where a charming tavern stood on the very same site. The
                             present building, constructed in the 1700s, has retained its &#39;Olde Worlde&#39; character and charm, making it a
@@ -66,7 +66,7 @@ const Home = () => {
                     </div>
                 </section>
                 <section>
-                    <h2 className={`${styles.heading} ${cormorantUnicase.className}`} >Awards</h2>
+                    <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Awards</h2>
                     <p>
                         The Star is more than just a pub, it&#39;s a multi-award-winning establishment. For a record-breaking 10 years,
                         we have proudly held the title of Surrey and Hants borders Cider pub of the year, as well as recently

@@ -1,4 +1,21 @@
-.heading {
-    position: relative;
+.inner_section {
     margin-bottom: 2rem;
+}
+
+.details_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.detail_card {
+    margin: 0 auto;
+}
+
+.detail_card h3 {
+    margin-bottom: 1.2rem;
+}
+
+.detail_card p {
+    margin-bottom: 0.8rem;
 }

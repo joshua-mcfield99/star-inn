@@ -1,0 +1,88 @@
+.form_container {
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.form_control {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form_control label:not(.file_input_label) {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form_control input {
+    width: 100%;
+}
+
+.form_control textarea {
+    font-family: inherit;
+    resize: vertical;
+    width: 100%;
+}
+
+.file_input_container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.file_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file_input_label {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    background-color: #000;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file_input_label:hover {
+    background-color: #3f3f3f;
+}
+
+.file_input_filename {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.form_submit {
+    width: 100%;
+}
+
+.form_submit button {
+    width: fit-content;
+    font-family: inherit;
+    background-color: #000;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form_submit button:hover {
+    background-color: #3f3f3f;
+}

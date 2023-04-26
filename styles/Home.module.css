@@ -15,11 +15,6 @@
     float: right;
 }
 
-.heading {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
 .image_fill {
     position: relative;
     object-fit: contain;
