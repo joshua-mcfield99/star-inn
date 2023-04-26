@@ -62,6 +62,7 @@ const Contact = () => {
                         <p>
                             We&#39;d love to hear from you! Whether you&#39;re looking to book a table or simply have a question about The Star, we&#39;re here to help. Just fill out the form below and our friendly team will get back to you as soon as possible with all the information you need.
                         </p>
+                        <p>Contact form coming soon.</p>
                     </div>
                 </section>
             </main>

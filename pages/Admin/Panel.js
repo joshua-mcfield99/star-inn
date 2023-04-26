@@ -16,7 +16,7 @@ const Panel = () => {
 
     return (
         <main className={`${styles.panel_container}`}>
-            
+            <h1>Panel under construction...</h1>
         </main>
     )
 }
