@@ -1,9 +1,10 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import styles from '../../styles/Login.module.css'
 import AuthContext from '@/context/auth-context'
 
 
 const AdminLogin = () => {
+    const [ isLoading, setIsLoading ] = useState(false);
 
     const authContext = useContext(AuthContext);
 
@@ -11,6 +12,7 @@ const AdminLogin = () => {
     const passwordEl = useRef(null);
 
     const submitHandler = (event) => {
+        setIsLoading(true);
         event.preventDefault();
         const email = emailEl.current.value;
         const password = passwordEl.current.value;
@@ -46,6 +48,7 @@ const AdminLogin = () => {
         })
         .then(resData => {
             if (resData.data.login.token) {
+                setIsLoading(false);
                 authContext.login(
                     resData.data.login.token,
                     resData.data.login.userId,
@@ -55,11 +58,13 @@ const AdminLogin = () => {
         })
         .catch(err  => {
             console.log(err)
+            setIsLoading(false);
         })
     };
 
   return (
     <main className={`${styles.main}`}>
+        {isLoading ? (<p>Loading...</p>) : (
         <form className={`${styles.login_container}`} onSubmit={submitHandler}>
             <div>
                 <h1 className={`${styles.title}`}>Login</h1>
@@ -75,7 +80,8 @@ const AdminLogin = () => {
             <div className={`${styles.form_control}`}>
                 <button type='submit'>Login</button>
             </div>
-        </form>
+        </form>)}
+        
     </main>
   )
 }

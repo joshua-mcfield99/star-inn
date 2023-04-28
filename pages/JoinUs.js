@@ -2,18 +2,55 @@ import Head from 'next/head'
 import React, { useState } from 'react'
 import { Cormorant_Unicase } from 'next/font/google'
 import styles from '../styles/JoinUs.module.css'
+import { sendJobApplication } from '@/libs/jobEmail'
 
 const cormorantUnicase = Cormorant_Unicase({
     subsets: ['latin'],
     weight: '700'
 })
 
+const initValues = {
+    email: "",
+    name: "",
+    message: "",
+    cv: ""
+};
+
+const initState = {values:initValues};
+
 const JoinUs = () => {
+    const [formData, setFormData] = useState(initState);
     const [fileName, setFileName] = useState('');
 
-    function handleFileSelect(event) {
-        setFileName(event.target.files[0].name);
+    const {values} = formData;
+
+    const handleChange = ({target}) => {
+        setFormData((prev) => ({
+            ...prev,
+            values: {
+                ...prev.values,
+                [target.name]: target.value,
+            }
+        }))
     }
+
+    const handleFileChange = (event) => {
+        setFileName(event.target.files[0].name);
+        handleChange(event);
+    };
+
+    const onSubmit = async () => {
+        try {
+          await sendJobApplication(values);
+        } catch (error) {
+          if (error.response && error.response.data) {
+            const jsonData = JSON.parse(error.response.data);
+            console.log(jsonData);
+          } else {
+            console.log(error);
+          }
+        }
+    };
 
   return (
     <>
@@ -32,18 +69,18 @@ const JoinUs = () => {
                 <p>
                     Please feel free to contact us using the form below. Even if there are no immediate openings, we&#39;ll keep your information on file and reach out to you when an opportunity arises!
                 </p>
-                <form className={`${styles.form_container}`}>
+                <form className={`${styles.form_container}`} method="POST" encType="multipart/form-data">
                     <div className={`${styles.form_control}`}>
                         <label htmlFor='email' >Email:</label>
-                        <input type={'email'} id='email' name='email' required/>
+                        <input type={'email'} id='email' name='email' value={values.email} onChange={handleChange} required/>
                     </div>
                     <div className={`${styles.form_control}`}>
                         <label htmlFor='name' >Full name:</label>
-                        <input type={'text'} id='name' name='name' required/>
+                        <input type={'text'} id='name' name='name' value={values.name} onChange={handleChange} required/>
                     </div>
                     <div className={`${styles.form_control}`}>
                         <label htmlFor='message' >Your message:</label>
-                        <textarea rows='10' cols='40' id='message' name='message' required>
+                        <textarea rows='10' cols='40' id='message' name='message' value={values.message} onChange={handleChange} required>
                         </textarea>
                     </div>
                     <div className={`${styles.form_control}`}>
@@ -54,7 +91,8 @@ const JoinUs = () => {
                                 id="cv"
                                 name="cv"
                                 className={`${styles.file_input}`}
-                                onChange={handleFileSelect}
+                                onChange={handleFileChange}
+                                value={values.cv}
                             />
                             <label htmlFor="cv" className={`${styles.file_input_label}`}>
                                 {fileName || 'Choose a file'}
@@ -62,7 +100,7 @@ const JoinUs = () => {
                         </div>
                     </div>
                     <div className={`${styles.form_submit}`}>
-                        <button>Submit</button>
+                        <button type='button' onClick={onSubmit}>Submit</button>
                     </div>
                 </form>
             </section>

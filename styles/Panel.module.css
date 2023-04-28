@@ -2,3 +2,31 @@
     width: 100vw;
     min-height: 100vh;
 }
+
+.editor_menu {
+    width: 100%;
+    height: fit-content;
+    margin: 1rem auto;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.editor_select {
+    padding: 1rem;
+    width: 25%;
+    margin: 0;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.editor_select:hover {
+    background-color: #3f3f3f;
+}
+
+.active {
+    background-color: #3f3f3f;
+}
