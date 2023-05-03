@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import AuthContext from '@/context/auth-context'
 import { useState } from 'react'
 import Router from 'next/router'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
 export default function App({ Component, pageProps }) {
     const [ token, setToken ] = useState(null)
@@ -20,9 +20,19 @@ export default function App({ Component, pageProps }) {
         setUserId(null);
         Router.push('/')
     }
-  
+    
+    const colors = {
+        backgrounds: {
+            100: '#fff0da',
+            200: '#FFF',
+            300: '#000'
+        }
+    }
+
+    const theme = extendTheme({colors});
+
     return (
-        <ChakraProvider>
+
         <AuthContext.Provider value={{ 
             token: token, 
             userId: userId, 
@@ -33,6 +43,6 @@ export default function App({ Component, pageProps }) {
                 <Component {...pageProps} />
             </Layout>  
         </AuthContext.Provider>
-    </ChakraProvider>
+
     ) 
 }
