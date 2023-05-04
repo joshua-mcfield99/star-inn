@@ -9,6 +9,7 @@
     width: 20rem;
     height: 400px;
     padding: 2rem;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-content: center;

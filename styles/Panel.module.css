@@ -1,6 +1,7 @@
 .panel_container {
     width: 100vw;
     min-height: 100vh;
+    margin: 2rem auto;
 }
 
 .editor_menu {
@@ -8,6 +9,14 @@
     height: fit-content;
     margin: 1rem auto;
     background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.editor_options {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -29,4 +38,108 @@
 
 .active {
     background-color: #3f3f3f;
+}
+
+.editor_container {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.editor_component {
+    width: 100%;
+}
+
+.mobile_toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 654px) {
+    .editor_menu {
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+    }
+
+    .editor_options {
+        position: absolute;
+        right: -100%;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .editor_select {
+        width: 25vw;
+    }
+
+    .editor_options.open_menu {
+        position: relative;
+        padding: 2rem;
+        left: 0%;
+    }
+
+    .editor_menu.open_menu {
+        height: fit-content;
+    }
+
+    .mobile_toggle {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: fit-content;
+        height: 100px;
+        background-color: #000;
+        cursor: pointer;
+    }
+
+    .toggle_text {
+        width: fit-content;
+        min-width: max-content;
+        height: fit-content;
+        margin-right: 1rem;
+    }
+
+    .mobile_toggle p {
+        margin: 0 auto 0 0;
+        color: #FFF;
+    }
+
+    .bar_container {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        row-gap: 6px;
+    }
+
+    .bar {
+        width: 30px;
+        height: 2px;
+        background-color: #FFF;
+        content: ' ';
+    }
+
+    .open_top {
+        position: relative;
+        top: 8px;
+        transform: rotate(45deg);
+        transition: all 500ms;
+    }
+
+    .open_bot {
+        position: relative;
+        top: -8px;
+        transform: rotate(-45deg);
+        transition: all 500ms;
+    }
+
+    .open_mid {
+        opacity: 0;
+    }
+
 }

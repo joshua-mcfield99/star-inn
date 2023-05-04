@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../styles/Drinks.module.css'
 import { Cormorant_Unicase } from 'next/font/google'
 import Image from 'next/image'
+import altText from '../data/liveBarAlts.json'
 
 const cormorantUnicase = Cormorant_Unicase({
     subsets: ['latin'],
@@ -10,6 +11,10 @@ const cormorantUnicase = Cormorant_Unicase({
 })
 
 const Drinks = () => {
+
+    let alt = JSON.stringify(altText[0]);
+    console.log(alt);
+
   return (
     <>
         <Head>
@@ -29,8 +34,8 @@ const Drinks = () => {
                 </p>
                 <div className={`${styles.live_img}`}>
                     <Image
-                        src='/Livebarplaceholder.jpg'
-                        alt='This is a live picture of our current ales.'
+                        src='/uploads/Live_Bar/LiveBar.png'
+                        alt={alt}
                         fill
                         className={`${styles.img_fill}`}
                     />

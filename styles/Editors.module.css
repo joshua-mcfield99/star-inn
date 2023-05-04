@@ -1,0 +1,47 @@
+.editor_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    margin: 2rem auto ;
+}
+
+.editor_form {
+    width: 80%;
+    max-width: 800px;
+    min-width: 310px;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.form_control {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form_control label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.form_control textarea {
+    width: 80%;
+}
+
+.editor_form button {
+    padding: 0.8rem;
+    width: 25%;
+    margin: 0;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}

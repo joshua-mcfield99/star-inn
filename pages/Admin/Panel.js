@@ -10,9 +10,17 @@ import LiveBarEditor from '@/components/editors/LiveBarEditor';
 
 const Panel = () => {
     const [ currentEditor, setCurrentEditor ] = useState('');
+    const [ isOpen, setIsOpen ] = useState(false);
 
     const router = useRouter();
     const authContext = useContext(AuthContext);
+
+    const handleToggle = () => {
+        if (!isOpen) {
+            return setIsOpen(true);
+        }
+        return setIsOpen(false);
+    }
 
     const handleSelect = (e) => {
         setCurrentEditor(e.target.id);
@@ -22,16 +30,29 @@ const Panel = () => {
         if (!authContext.token) {
             router.push('/Admin/Login');
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [authContext.token]);
 
     return (
         <main className={`${styles.panel_container}`}>
             <h1>Admin Panel</h1>
-            <div className={`${styles.editor_menu} `}>
-                <p className={`${styles.editor_select} ${currentEditor === 'livebar' ? styles.active : ''}`} id='livebar' onClick={handleSelect}>Live bar image</p>
-                <p className={`${styles.editor_select} ${currentEditor === 'gallery' ? styles.active : ''}`} id='gallery' onClick={handleSelect}>Gallery</p>
-                <p className={`${styles.editor_select} ${currentEditor === 'menus' ? styles.active : ''}`} id='menus' onClick={handleSelect}>Menus</p>
-                <p className={`${styles.editor_select} ${currentEditor === 'events' ? styles.active : ''}`} id='events' onClick={handleSelect}>Events</p>
+            <div className={`${styles.editor_menu} ${isOpen ? styles.open_menu : ''}`}>
+                <div className={`${styles.mobile_toggle}`} onClick={handleToggle}>
+                    <div className={`${styles.toggle_text}`}>
+                        <p>Editor Menu</p>
+                    </div>
+                    <div className={`${styles.bar_container}`}>
+                        <div className={`${styles.bar} ${isOpen ? styles.open_top : ''}`}></div>
+                        <div className={`${styles.bar} ${isOpen ? styles.open_mid : ''}`}></div>
+                        <div className={`${styles.bar} ${isOpen ? styles.open_bot : ''}`}></div>
+                    </div>
+                </div>
+                <div className={`${styles.editor_options} ${isOpen ? styles.open_menu : ''}`}>
+                    <p className={`${styles.editor_select} ${currentEditor === 'livebar' ? styles.active : ''}`} id='livebar' onClick={handleSelect}>Live bar image</p>
+                    <p className={`${styles.editor_select} ${currentEditor === 'gallery' ? styles.active : ''}`} id='gallery' onClick={handleSelect}>Gallery</p>
+                    <p className={`${styles.editor_select} ${currentEditor === 'menus' ? styles.active : ''}`} id='menus' onClick={handleSelect}>Menus</p>
+                    <p className={`${styles.editor_select} ${currentEditor === 'events' ? styles.active : ''}`} id='events' onClick={handleSelect}>Events</p>
+                </div>
             </div>
             {currentEditor === 'livebar' ? 
             (
