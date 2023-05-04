@@ -1,8 +1,5 @@
-const { NetlifyAdapter } = require('@vercel/adapter-netlify');
-
 module.exports = {
     reactStrictMode: true,
-    adapter: new NetlifyAdapter(),
     async rewrites() {
         return [
             {
