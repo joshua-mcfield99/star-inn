@@ -1,6 +1,8 @@
+const { NetlifyAdapter } = require('@vercel/adapter-netlify');
+
 module.exports = {
     reactStrictMode: true,
-    target: 'serverless',
+    adapter: new NetlifyAdapter(),
     async rewrites() {
         return [
             {
