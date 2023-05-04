@@ -45,7 +45,7 @@ const removeFiles = (dirPath) => {
     });
 };
 
-const handler = async (req, res) => {
+export default async function handler(req, res) {
     await removeFiles(UPLOAD_DIR);
     if (req.method !== 'POST') {
         res.status(405).json({ message: 'Method not allowed', code: 'METHOD_NOT_ALLOWED' });
@@ -98,4 +98,3 @@ const handler = async (req, res) => {
     }
 };
 
-export default handler;
