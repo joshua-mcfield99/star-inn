@@ -78,7 +78,8 @@ const AdminLogin = () => {
                 <input type='password' id='password' ref={passwordEl}/>
             </div>
             <div className={`${styles.form_control}`}>
-                <button type='submit'>Login</button>
+                <button type='submit' disabled style={{margin: '0.5rem 0'}}>Login</button>
+                <p>Button disabled</p>
             </div>
         </form>)}
         

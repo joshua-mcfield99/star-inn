@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>The Star || Home</title>
+                <title>The Star | Home</title>
                 <link rel='icon' type='image/ico' src='/public/favicon.ico' />
             </Head>
             <main>

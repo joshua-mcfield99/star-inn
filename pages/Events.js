@@ -12,7 +12,7 @@ const Events = () => {
   return (
     <>
         <Head>
-        <title>The Star || Events</title>
+        <title>The Star | Events</title>
         </Head>
         <main>
             <section>

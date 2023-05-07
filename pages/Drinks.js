@@ -19,7 +19,7 @@ const Drinks = () => {
     <>
         <Head>
 
-            <title>The Star || Drinks</title>
+            <title>The Star | Drinks</title>
         </Head>
         <main>
             <section>
