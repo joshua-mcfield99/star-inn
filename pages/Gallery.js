@@ -12,7 +12,7 @@ const Gallery = () => {
   return (
     <>
         <Head>
-            <title>Gallery</title>
+            <title>The Star || Gallery</title>
         </Head>
         <main>
             <section>

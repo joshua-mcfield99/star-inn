@@ -13,7 +13,8 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>Home</title>
+                <title>The Star || Home</title>
+                <link rel='icon' type='image/ico' src='/public/favicon.ico' />
             </Head>
             <main>
                 <section className={`${styles.welcome}`}>
