@@ -19,6 +19,7 @@ const Drinks = () => {
     <>
         <Head>
 
+            <title>Drinks</title>
         </Head>
         <main>
             <section>

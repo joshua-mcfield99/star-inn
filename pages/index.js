@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>
             <Head>
-
+                <title>Home</title>
             </Head>
             <main>
                 <section className={`${styles.welcome}`}>

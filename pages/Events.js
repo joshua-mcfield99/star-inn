@@ -12,7 +12,7 @@ const Events = () => {
   return (
     <>
         <Head>
-
+        <title>Events</title>
         </Head>
         <main>
             <section>

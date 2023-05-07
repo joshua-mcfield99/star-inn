@@ -18,7 +18,7 @@ const Food = () => {
   return (
     <>
         <Head>
-
+            <title>Food</title>
         </Head>
         <main className={`${styles.food}`}>
             <section>

@@ -15,7 +15,7 @@ const Contact = () => {
     return (
         <>
             <Head>
-
+                <title>Contact</title>
             </Head>
             <main>
 

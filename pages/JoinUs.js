@@ -20,7 +20,7 @@ const JoinUs = () => {
     return (
         <ChakraProvider>
         <Head>
-        
+            <title>Join Us</title>
         </Head>
         <Container maxW="none" bg="#f8f1e7" paddingTop="2rem" paddingBottom="2rem">
             <main >
