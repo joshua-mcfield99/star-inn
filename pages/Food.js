@@ -37,7 +37,7 @@ const Food = () => {
                         </li>
                         <li>
                             <h3 className={`${cormorantUnicase.className}`} >Saturday</h3>
-                            <p>Lunch: 12-3:45pm</p>
+                            <p>Lunch: 12-3:30pm</p>
                             <p>Evening: 5-8pm</p>
 
                         </li>
