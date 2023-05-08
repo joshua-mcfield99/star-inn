@@ -9,20 +9,20 @@ import cloudinary from 'cloudinary-core';
 
 const LiveBarEditor = () => {
 
-    const handleFileUpload = async (event) => {
-        const file = event.target.files[0];
-        const formData = new FormData();
-        formData.append('file', file);
-        formData.append('upload_preset', 'ez2vk527');
-        formData.append('public_id', 'LiveBarImage');
-        const response = await fetch(`https://api.cloudinary.com/v1_1/drkqjlsvr/upload`, {
-          method: 'POST',
-          body: formData
-        });
-        const data = await response.json();
-        console.log(data);
-        console.log(data.secure_url);
-    }
+    //const handleFileUpload = async (event) => {
+    //    const file = event.target.files[0];
+    //    const formData = new FormData();
+    //    formData.append('file', file);
+    //    formData.append('upload_preset', 'ez2vk527');
+    //    formData.append('public_id', 'LiveBarImage');
+    //    const response = await fetch(`https://api.cloudinary.com/v1_1/drkqjlsvr/upload`, {
+    //      method: 'POST',
+    //      body: formData
+    //    });
+    //    const data = await response.json();
+    //    console.log(data);
+    //    console.log(data.secure_url);
+    //}
 
     const [newImage, setNewImage] = useState(null);
     const [altText, setAltText] = useState('');
@@ -40,7 +40,7 @@ const LiveBarEditor = () => {
         <input 
         name='newImage'
         type='file'
-        onChange={handleFileUpload}
+        onChange={console.log('changed')}
         />
         </div>
         </form>
