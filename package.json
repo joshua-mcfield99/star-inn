@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-api": "netlify-lambda serve functions"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",
@@ -16,6 +17,7 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "formidable": "^2.1.1",
+    "netlify-lambda": "^2.0.16",
     "next": "13.2.4",
     "nodemailer": "^6.9.1",
     "react": "18.2.0",
