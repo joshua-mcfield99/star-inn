@@ -3,7 +3,7 @@ import path from 'path';
 import { promisify } from 'util';
 import formidable from 'formidable';
 import sharp from 'sharp';
-import { addLiveBarAlt, clearLiveBarAlts, liveBarAlts } from '../../helpers/new-live-bar-alts';
+import { addLiveBarAlt, clearLiveBarAlts, liveBarAlts } from '../helpers/new-live-bar-alts';
 
 const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads', 'Live_bar');
 

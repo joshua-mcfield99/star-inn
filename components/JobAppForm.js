@@ -83,7 +83,7 @@ const JobAppForm = () => {
                         {error}
                     </Text>
                 )}
-                <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
+                <FormControl isRequired netlify isInvalid={touched.name && !values.name} mb={5}>
                     <FormLabel>Name</FormLabel>
                     <Input 
                     type='text'
