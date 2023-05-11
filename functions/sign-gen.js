@@ -1,15 +1,25 @@
 import cloudinary from 'cloudinary';
 
-exports.handler = (req, res) => {
-    const timestamp = req.query.timestamp;
-    const upload_preset = req.query.upload_preset
-  const signature = cloudinary.utils.api_sign_request(
-    {
-      timestamp: timestamp,
-      upload_preset: upload_preset,
-    },
-    process.env.REACT_APP_CLOUD_SEC
-  );
+exports.handler = async (event, context) => {
+  try {
+    const { timestamp, upload_preset } = event.queryStringParameters;
 
-  res.status(200).json({ signature });
-}
+    const signature = cloudinary.utils.api_sign_request(
+      {
+        timestamp: timestamp,
+        upload_preset: upload_preset,
+      },
+      process.env.REACT_APP_CLOUD_SEC
+    );
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ signature }),
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Internal Server Error' }),
+    };
+  }
+};
