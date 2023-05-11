@@ -53,29 +53,29 @@ const Food = () => {
                     <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Menu</h2>
                     <p>Click a menu for an enlarged view.</p>
                     <div className={`${styles.menu_select}`}>
-                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/StarmenuLunchtime2023March.pdf')}}>
+                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/LunchMenu.pdf')}}>
                             <h3>Lunch Menu</h3>
-                            <PdfViewer pdfUrl={'/StarmenuLunchtime2023March.pdf'}/>
+                            <PdfViewer pdfUrl={'https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/LunchMenu.pdf'}/>
                         </div>
-                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/Star Evening menu March 2023.pdf')}}>
+                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/EveningMenu.pdf')}}>
                             <h3>Evening Menu</h3>
-                            <PdfViewer pdfUrl={'/Star Evening menu March 2023.pdf'}/>
+                            <PdfViewer pdfUrl={'https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/EveningMenu.pdf'}/>
                         </div>
-                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/Star chip shop menu March 2023.pdf')}}>
+                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/ChipShopMenu.pdf')}}>
                             <h3>Chip Shop Menu</h3>
-                            <PdfViewer pdfUrl={'/Star chip shop menu March 2023.pdf'}/>
+                            <PdfViewer pdfUrl={'https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/ChipShopMenu.pdf'}/>
                         </div>
-                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/Star Burger menu 2023.pdf')}}>
+                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/BurgerMenu.pdf')}}>
                             <h3>Burger Night Menu</h3>
-                            <PdfViewer pdfUrl={'/Star Burger menu 2023.pdf'}/>
+                            <PdfViewer pdfUrl={'https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/BurgerMenu.pdf'}/>
                         </div>
-                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/Star Pizza menu 2023.pdf')}}>
+                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/PizzaMenu.pdf')}}>
                             <h3>Pizza Night Menu</h3>
-                            <PdfViewer pdfUrl={'/Star Pizza menu 2023.pdf'}/>
+                            <PdfViewer pdfUrl={'https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/PizzaMenu.pdf'}/>
                         </div>
-                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('/Star menu Sunday 2023 March.pdf')}}>
+                        <div className={`${styles.menus}`} onClick={() => {setTrigger(true); setMenuClicked('https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/SundayMenu.pdf')}}>
                             <h3>Sunday Lunch Menu</h3>
-                            <PdfViewer pdfUrl={'/Star menu Sunday 2023 March.pdf'}/>
+                            <PdfViewer pdfUrl={'https://res.cloudinary.com/drkqjlsvr/image/upload/v1683827124/starMenus/SundayMenu.pdf'}/>
                         </div>
                     </div>
                     <MenuPopUp trigger={trigger} setTrigger={setTrigger} pdfUrl={menuClicked} />

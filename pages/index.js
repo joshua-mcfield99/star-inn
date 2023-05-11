@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { CloudinaryContext, Image } from 'cloudinary-react'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import { Cormorant_Unicase } from 'next/font/google'
@@ -20,13 +20,13 @@ const Home = () => {
                 <section className={`${styles.welcome}`}>
                     <div className={`${styles.welcome_inner}`}>
                         <div className={`${styles.home_logo}`}>
-                            <Image
-                                src={'/StarLogo.png'}
-                                alt='The Star Logo'
-                                fill
-                                sizes='(max-width: 4000px)'
-                                className={`${styles.image_fill}`}
-                            />
+                            <CloudinaryContext cloud_name='drkqjlsvr'>
+                                <Image
+                                    publicID='thestar/starLogo'
+                                    alt='The Star Logo'
+                                    width='100%'
+                                />
+                            </CloudinaryContext>
                         </div>
                         <h1 className={`${'heading'} ${cormorantUnicase.className}`}>Welcome!</h1>
                         <p>
@@ -56,13 +56,13 @@ const Home = () => {
                             unique tavern!
                         </p>
                         <div className={`${styles.welcome_img}`}>
-                            <Image
-                                src={'/team.jpg'}
-                                alt='The Star staff'
-                                fill
-                                sizes='(max-width: )'
-                                className={`${styles.image_fill}`}
-                            />
+                            <CloudinaryContext cloud_name='drkqjlsvr'>
+                                <Image
+                                    publicID='thestar/team'
+                                    alt='The Star staff'
+                                    width='100%'
+                                />
+                            </CloudinaryContext>
                         </div>
                     </div>
                 </section>

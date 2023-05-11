@@ -38,7 +38,6 @@ const Drinks = () => {
                         <Image
                             publicID='livebarimage/LiveBarImage'
                             width='100%'
-                            height='600px'
                             alt='This is our live bar image, It should show our current selection of ales.'
                         />
                     </CloudinaryContext>
