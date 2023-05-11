@@ -21,7 +21,7 @@ const LiveBarEditor = () => {
 
     try {
       // Fetch the signature from the API route
-      const response = await axios.get('/api/sign-gen', {
+      const response = await axios.get('/functions/sign-gen', {
         params: {
           timestamp: Math.floor(Date.now() / 1000),
           upload_preset: 'ez2vk527',
