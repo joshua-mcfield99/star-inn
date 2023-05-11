@@ -1,6 +1,6 @@
 import cloudinary from 'cloudinary';
 
-const handler = (req, res) => {
+exports.handler = (req, res) => {
     console.log(req.query);
   const { timestamp, upload_preset } = req.query;
     console.log(req.query);
@@ -14,5 +14,3 @@ const handler = (req, res) => {
 
   res.status(200).json({ signature });
 }
-
-module.exports = handler;
