@@ -1,9 +1,7 @@
 import cloudinary from 'cloudinary';
 
 exports.handler = (req, res) => {
-    console.log(req.query);
   const { timestamp, upload_preset } = req.query;
-    console.log(req.query);
   const signature = cloudinary.utils.api_sign_request(
     {
       timestamp: timestamp,
