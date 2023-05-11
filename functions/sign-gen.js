@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
         timestamp: timestamp,
         upload_preset: upload_preset,
       },
-      process.env.REACT_APP_CLOUD_SEC
+      process.env.CLOUD_SEC 
     );
 
     return {
