@@ -14,4 +14,4 @@ const handler = (req, res) => {
   res.status(200).json({ signature });
 }
 
-export default handler;
+module.exports = handler;
