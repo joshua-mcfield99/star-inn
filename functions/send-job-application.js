@@ -34,10 +34,16 @@ exports.handler = async (req, res) => {
                 ...generateEmailContent(data),
                 subject: "Job application",
             });
-            return res.status(200).json({success: true});
+            return {
+                statusCode: 200,
+                body: JSON.stringify({ success: true }),
+            };
         } catch (error) {
             console.log(error);
-            return res.status(400).json({message: error.message});
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ message: error.message }),
+            };
         }
     }
     console.log(req.body);
