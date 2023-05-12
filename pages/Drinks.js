@@ -12,9 +12,6 @@ const cormorantUnicase = Cormorant_Unicase({
 
 const Drinks = () => {
 
-    let alt = JSON.stringify(altText[0]);
-    console.log(alt);
-
   return (
     <>
         <Head>
