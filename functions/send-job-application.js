@@ -24,6 +24,7 @@ const generateEmailContent = (data) => {
 exports.handler = async (req, res) => {
     if (req.method === "POST") {
         const data = JSON.parse(req.body);
+        console.log("Received data:", data);
         if (!data.name || !data.email || !data.message) {
             return {
                 statusCode: 400,
@@ -49,7 +50,7 @@ exports.handler = async (req, res) => {
             };
         }
     }
-    console.log(req.body);
+    console.log("Invalid request:", req.body);
     return {
         statusCode: 400,
         body: JSON.stringify({ message: "Bad request" }),
