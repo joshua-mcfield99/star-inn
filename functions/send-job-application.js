@@ -62,7 +62,7 @@ exports.handler = async (req, res) => {
       if (!data.name || !data.email || !data.message) {
         return {
           statusCode: 400,
-          body: JSON.stringify({ message: "Bad request" }),
+          body: JSON.stringify({ message: "Bad request data incorrect" }),
         };
       }
 
