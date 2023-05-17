@@ -23,7 +23,7 @@ const generateEmailContent = (data) => {
 
 exports.handler = async (req, res) => {
     if (req.method === "POST") {
-        const data = req.body;
+        const data = JSON.parse(req.body);
         if (!data.name || !data.email || !data.message) {
             return {
                 statusCode: 400,

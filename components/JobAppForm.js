@@ -56,7 +56,11 @@ const JobAppForm = () => {
             isLoading: true
         }));
         try {
-            await sendJobApplication(values);
+            await sendJobApplication({
+                name: values.name,
+                email: values.email,
+                message: values.message
+            });
             setTouched({});
             setState(initState);
             setValidEmail(false);
