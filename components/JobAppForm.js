@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, ChakraProvider, Container, FormControl, FormErrorMessage, FormLabel, Input, Text, Textarea, useToast } from '@chakra-ui/react'
-import { sendJobApplication } from '@/lib/api'
+import { sendJobApplication } from '../functions/api'
 
 const initValues = {
     name: "",
