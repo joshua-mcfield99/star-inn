@@ -54,10 +54,10 @@ const transporter = nodemailer.createTransport({
     },
 });
     
-exports.handler = async (req, res) => {
-    if (req.method === "POST") {
+exports.handler = async (event, context) => {
+    if (event.httpMethod === "POST") {
         try {
-            const data = JSON.parse(req.body);
+            const data = JSON.parse(event.body);
             console.log("Received data:", data);
             if (!data.name || !data.email || !data.message) {
                 return {
@@ -86,9 +86,9 @@ exports.handler = async (req, res) => {
         }
     }
     
-    console.log("Invalid request:", req.body);
+    console.log("Invalid request:", event.body);
     return {
         statusCode: 400,
         body: JSON.stringify({ message: "Bad request" }),
     };
- };
+};
