@@ -63,19 +63,27 @@ const JobAppForm = () => {
     
     const sendJobApplication = async (data) => {
         console.log('function called:', data);
-        return fetch("https://www.starinngodalming.co.uk/.netlify/functions/send-job-application", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-        },
-    }).then((res) => {
-        if (!res.ok) throw new Error("Failed to send message");
-        return res.json();
-    });
+        try {
+            const response = await fetch("https://www.starinngodalming.co.uk/.netlify/functions/send-job-application", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+            });
+            
+            if (!response.ok) {
+                throw new Error("Failed to send message");
+            }
+            
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            throw new Error(error.message);
+        }
     };
-
+    
     const onSubmit = async () => {
     setState((prev) => ({
         ...prev,
