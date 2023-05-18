@@ -64,7 +64,7 @@ const AdminLogin = () => {
 
   return (
     <main className={`${styles.main}`}>
-        {isLoading ? (<p>Loading...</p>) : (
+        {isLoading ? (<p className={`${styles.loading}`}>Loading...</p>) : (
         <form className={`${styles.login_container}`} onSubmit={submitHandler}>
             <div>
                 <h1 className={`${styles.title}`}>Login</h1>
@@ -78,7 +78,7 @@ const AdminLogin = () => {
                 <input type='password' id='password' ref={passwordEl}/>
             </div>
             <div className={`${styles.form_control}`}>
-                <button type='submit' disable style={{margin: '0.5rem 0'}}>Login</button>
+                <button type='submit' disabled style={{margin: '0.5rem 0'}}>Login</button>
                 <p>Button disabled</p>
             </div>
         </form>)}

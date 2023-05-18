@@ -51,3 +51,7 @@
 .form_control button:active {
     background-color: #272727;
 }
+
+.loading {
+    margin: auto;
+}

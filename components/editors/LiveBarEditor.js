@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import styles from '/styles/Editors.module.css';
+import styles from '/styles/components/Editors.module.css';
 
 const LiveBarEditor = () => {
   const [selectedImage, setSelectedImage] = useState(null);

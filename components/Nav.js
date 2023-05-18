@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import styles from '../styles/Nav.module.css'
+import styles from '../styles/components/Nav.module.css';
 import { Cormorant_Unicase } from 'next/font/google';
 import { Josefin_Sans } from 'next/font/google'
 import AuthContext from '@/context/auth-context';
