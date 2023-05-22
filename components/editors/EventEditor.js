@@ -126,7 +126,7 @@ const EventEditor = () => {
         const requestBody = {
             query: `
             mutation {
-                deleteEventByTitle(title: "${title}") {
+                deleteEvent(title: "${title}") {
                     _id
                     title
                 }
