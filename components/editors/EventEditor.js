@@ -5,6 +5,8 @@ import AuthContext from '@/context/auth-context';
 const EventEditor = () => {
     const [toggled, setToggled] = useState('');
     const [eventTitles, setEventTitles] = useState([]);
+    const [createSuccess, setCreateSuccess] = useState(false);
+    const [deleteSuccess, setDeleteSuccess] = useState(false);
     
     const authContext = useContext(AuthContext);
     
@@ -108,6 +110,7 @@ const EventEditor = () => {
         })
         .then(resData => {
             console.log(resData);
+            setCreateSuccess(true);
         })
         .catch(err => {
             console.log(err);
@@ -152,6 +155,8 @@ const EventEditor = () => {
         })
         .then(resData => {
             console.log(resData);
+            setDeleteSuccess(true);
+            fetchEventTitles();
         })
         .catch(err => {
             console.log(err);
@@ -184,6 +189,7 @@ const EventEditor = () => {
                         </div>
                         <div className={`${styles.form_control}`}>
                             <button type='submit' onClick={onSubmit}>Submit</button>
+                            {createSuccess && <p>Event created successfully!</p>}
                         </div>
                     </form>
                 </div>
@@ -208,6 +214,7 @@ const EventEditor = () => {
                         </div>
                         <div className={`${styles.form_control}`}>
                             <button type='submit' onClick={onDeleteSubmit}>Delete</button>
+                            {deleteSuccess && <p>Event deleted successfully!</p>}
                         </div>
                     </form>
                 </div>
