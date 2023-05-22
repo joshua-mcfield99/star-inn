@@ -37,12 +37,11 @@ const MenuEditor = () => {
         const { signature } = response.data;
         
         const formData = new FormData();
-        formData.append('file', selectedPDF, 'PDFFile');
+        formData.append('file', selectedPDF, menuSelection);
         formData.append('upload_preset', 'vw9icdpp');
         formData.append('signature', signature);
         formData.append('api_key', '585686486369695');
         formData.append('timestamp', Math.floor(Date.now() / 1000));
-        formData.append('public_id', 'LunchMenu'); // Set the publicId based on the menu selection
         
         const uploadResponse = await axios.post(
             'https://api.cloudinary.com/v1_1/drkqjlsvr/image/upload',
