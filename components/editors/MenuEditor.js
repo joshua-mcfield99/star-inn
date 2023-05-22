@@ -45,7 +45,7 @@ const MenuEditor = () => {
         formData.append('public_id', menuSelection); // Set the publicId based on the menu selection
         
         const uploadResponse = await axios.post(
-            'https://api.cloudinary.com/v1_1/drkqjlsvr/upload',
+            'https://api.cloudinary.com/v1_1/drkqjlsvr/upload/raw',
             formData
             );
             
