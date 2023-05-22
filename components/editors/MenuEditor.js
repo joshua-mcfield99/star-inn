@@ -28,15 +28,14 @@ const MenuEditor = () => {
         try {
             // Fetch the signature from the API route
             const response = await axios.get('https://www.starinngodalming.co.uk/.netlify/functions/sign-gen', {
-            params: {
-                timestamp: Math.floor(Date.now() / 1000),
-                upload_preset: 'vw9icdpp',
-            },
-        });
+                params: {
+                    timestamp: Math.floor(Date.now() / 1000),
+                    upload_preset: 'vw9icdpp',
+                },
+            });
         
         const { signature } = response.data;
-        console.log(signature);
-        
+
         const formData = new FormData();
         formData.append('file', selectedPDF, menuSelection);
         formData.append('upload_preset', 'vw9icdpp');

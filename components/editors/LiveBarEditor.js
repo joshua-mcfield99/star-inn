@@ -27,8 +27,8 @@ const LiveBarEditor = () => {
           upload_preset: 'ez2vk527',
         },
       });
+      
       const { signature } = response.data;
-      console.log(signature);
 
       const formData = new FormData();
       formData.append('file', selectedImage, 'LiveBarImage');
