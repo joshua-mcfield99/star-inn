@@ -101,7 +101,7 @@ section {
     h1 {
         font-size: 1.8rem;
     }
-
+    
     p {
         font-size: 0.9rem;
     }
@@ -109,11 +109,18 @@ section {
 
 
 @media only screen and (max-width: 770px) {
-
+    
     main {
         width: 90%;
     }
 }
 
-
+@keyframes lds_dual_ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 

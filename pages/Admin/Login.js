@@ -1,6 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import styles from '../../styles/Login.module.css'
 import AuthContext from '@/context/auth-context'
+import Spinner from '@/components/Spinner';
 
 
 const AdminLogin = () => {
@@ -64,7 +65,7 @@ const AdminLogin = () => {
 
   return (
     <main className={`${styles.main}`}>
-        {isLoading ? (<p className={`${styles.loading}`}>Loading...</p>) : (
+        {isLoading ? (<Spinner />) : (
         <form className={`${styles.login_container}`} onSubmit={submitHandler}>
             <div>
                 <h1 className={`${styles.title}`}>Login</h1>
