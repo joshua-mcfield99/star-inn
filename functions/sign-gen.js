@@ -11,7 +11,6 @@ exports.handler = async (event, context) => {
       },
       process.env.CLOUD_SEC 
     );
-
     return {
       statusCode: 200,
       body: JSON.stringify({ signature }),

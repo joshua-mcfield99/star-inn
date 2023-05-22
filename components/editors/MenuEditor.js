@@ -35,6 +35,7 @@ const MenuEditor = () => {
         });
         
         const { signature } = response.data;
+        console.log(signature);
         
         const formData = new FormData();
         formData.append('file', selectedPDF, menuSelection);
