@@ -111,6 +111,7 @@ const EventEditor = () => {
         .then(resData => {
             console.log(resData);
             setCreateSuccess(true);
+            fetchEventTitles();
         })
         .catch(err => {
             console.log(err);
