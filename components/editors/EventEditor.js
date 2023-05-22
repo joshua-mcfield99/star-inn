@@ -189,7 +189,9 @@ const EventEditor = () => {
                         </div>
                         <div className={`${styles.form_control}`}>
                             <button type='submit' onClick={onSubmit}>Submit</button>
-                            {createSuccess && <p>Event created successfully!</p>}
+                            <div className={`${styles.success_message}`}>
+                                {createSuccess && <p>Event created successfully!</p>}
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -214,7 +216,9 @@ const EventEditor = () => {
                         </div>
                         <div className={`${styles.form_control}`}>
                             <button type='submit' onClick={onDeleteSubmit}>Delete</button>
-                            {deleteSuccess && <p>Event deleted successfully!</p>}
+                            <div className={`${styles.success_message}`}>
+                                {deleteSuccess && <p>Event deleted successfully!</p>}
+                            </div>
                         </div>
                     </form>
                 </div>

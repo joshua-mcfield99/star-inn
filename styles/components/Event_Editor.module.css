@@ -119,3 +119,7 @@
 .form_control button:active {
     background-color: #272727;
 }
+
+.success_message {
+    margin: 1rem auto 1rem 1rem;
+}
