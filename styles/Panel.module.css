@@ -16,7 +16,7 @@
 .panel_container h2 {
     width: 100%;
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 .editor_menu {
