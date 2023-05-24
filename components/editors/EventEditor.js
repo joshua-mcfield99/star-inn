@@ -58,10 +58,10 @@ const EventEditor = () => {
     };
 
     const handleToggle = (e) => {
-        if (e.target.id === toggled) {
+        if (e.currentTarget.id === toggled) {
             setToggled('');
         } else {
-            setToggled(e.target.id);
+            setToggled(e.currentTarget.id);
         }
     };
 

@@ -1,6 +1,21 @@
 .panel_container {
     width: 100vw;
     min-height: 100vh;
+    margin: 0 auto 2rem;
+}
+
+.panel_container h1 {
+    font-size: 2rem;
+}
+
+.panel_container h2 {
+    font-size: 1.5rem;
+}
+
+.panel_container h1,
+.panel_container h2 {
+    width: 100%;
+    max-width: 800px;
     margin: 2rem auto;
 }
 
@@ -19,12 +34,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 .editor_select {
     padding: 1rem;
     width: 25%;
+    height: fit-content;
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
@@ -33,7 +49,8 @@
     cursor: pointer;
 }
 
-.editor_select:hover {
+.editor_select:hover,
+.editor_options:hover {
     background-color: #3f3f3f;
 }
 
@@ -54,52 +71,76 @@
     display: none;
 }
 
-@media only screen and (max-width: 654px) {
+@media only screen and (max-width: 1080px) {
+    .panel_container h1,
+    .panel_container h2 {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 817px) {
+    .panel_container h1 {
+        font-size: 1.8rem;
+    }
+
+    .panel_container h2 {
+        font-size: 1.4rem;
+    }
+
     .editor_menu {
         position: relative;
         overflow: hidden;
-        height: 100px;
+        height: fit-content;
+        max-height: 80px;
+        display: block;
+        transition: 1000ms;
     }
 
     .editor_options {
-        position: absolute;
-        right: -100%;
+        position: relative;
+        top: -400px;
         flex-direction: column;
-        width: fit-content;
+        width: 100%;
+        height: fit-content;
+        z-index: 98;
+        transition: 1000ms;
+        padding-bottom: 1rem;
     }
 
     .editor_select {
-        width: 25vw;
+        width: 170px;
+        padding: 1rem 1.5rem;
     }
 
     .editor_options.open_menu {
-        position: relative;
-        padding: 2rem;
-        left: 0%;
+        top: 0;
+        transition: 1000ms;
     }
 
     .editor_menu.open_menu {
-        height: fit-content;
+        max-height: 500px;
+        transition: 1000ms;
     }
 
     .mobile_toggle {
-        position: absolute;
+        position: relative;
         right: 0px;
         display: flex;
         justify-content: center;
         align-content: center;
         align-items: center;
-        width: fit-content;
-        height: 100px;
+        width: 100%;
+        height: 80px;
         background-color: #000;
         cursor: pointer;
+        z-index: 99;
     }
 
     .toggle_text {
         width: fit-content;
         min-width: max-content;
         height: fit-content;
-        margin-right: 1rem;
+        margin: 0 1rem 0 auto;
     }
 
     .mobile_toggle p {

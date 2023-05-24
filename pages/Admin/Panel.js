@@ -24,6 +24,7 @@ const Panel = () => {
 
     const handleSelect = (e) => {
         setCurrentEditor(e.target.id);
+        !setIsOpen()
     };
     
     useEffect(() => {

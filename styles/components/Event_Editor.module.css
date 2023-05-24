@@ -14,7 +14,6 @@
 .toggle {
     position: relative;
     width: 100%;
-    max-width: 96vw;
     margin: 0 auto;
     height: fit-content;
     background-color: #000;
@@ -29,17 +28,22 @@
     font-size: 1.2rem;
     color: #FFF;
     height: fit-content;
-    margin: 1rem auto 1rem 1rem;
+    width: fit-content;
+    margin: 0 auto 0 1rem;
+    padding: 1rem 0; 
+    cursor: pointer;
 }
 
 .arrow_container {
     width: 40px;
     height: 40px;
-    margin: 1rem 1rem 1rem auto;
+    margin: 0 1rem 0 auto;
+    padding: 1rem 0; 
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    cursor: pointer;
 }
 
 .arrow {

@@ -28,7 +28,7 @@ const Drinks = () => {
             <section>
                 <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Live Bar</h2>
                 <p>
-                    While we endeavor to maintain an up-to-date bar image, during peak hours, we may not always be able to do so.
+                We&#39;re all about keeping things fresh and up-to-date, but during peak hours, it can be a challenge. Our ales have a tendency to change throughout the day, so even if we&#39;ve made updates, accuracy can still be a bit elusive. Rest assured, though, we&#39;re here to make your experience amazing!
                 </p>
                 <div className={`${styles.live_img}`}>
                     <CloudinaryContext cloudName='drkqjlsvr'>

@@ -71,25 +71,9 @@ const Nav = (props) => {
                             </div>
                         )}
                         {context.token && (
-                            <div className={`${styles.nav_links}`}>
-                            <div className={`${styles.mobile_nav}`}>
-                                <div className={`${styles.toggle}`} onClick={handleToggle}>
-                                    <div className={`${styles.togglebar} ${styles.topbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
-                                    <div className={`${styles.togglebar} ${styles.midbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
-                                    <div className={`${styles.togglebar} ${styles.botbar} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}></div>
-                                </div>
-                                <div className={`${styles.mobile_links} ${openMenu ? `${styles.open}` : `${styles.closed}`}`}>
-                                    <ul>
-                                        <li><Link href='/Admin/Panel'>Admin Panel</Link></li>
-                                        <li><button onClick={props.logout}>Logout</button></li>
-                                    </ul>
-                                </div>
+                            <div className={`${styles.logout}`}>
+                                <button className={`${josefinSans.className} ${styles.log_btn}`} onClick={context.logout}>Logout</button>
                             </div>
-                            <ul className={`${styles.links}`}>
-                                <li className='panel_link'><Link href='/Admin/Panel'>Admin Panel</Link></li>
-                                <li><button className={`${josefinSans.className}`} onClick={context.logout}>Logout</button></li>
-                            </ul>
-                        </div>
                         )}
                     </div>
                 )

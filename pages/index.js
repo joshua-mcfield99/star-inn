@@ -31,9 +31,9 @@ const Home = () => {
                         <h1 className={`${'heading'} ${cormorantUnicase.className}`}>Welcome!</h1>
                         <p>
                             The Star has a rich history dating back to 1832, where a charming tavern stood on the very same site. The
-                            present building, constructed in the 1700s, has retained its &#39;Olde Worlde&#39; character and charm, making it a
+                            present building, constructed in the 1600s, has retained its &#39;Olde Worlde&#39; character and charm, making it a
                             unique and inviting destination. With a passion for providing great food and drinks to great people, The Star
-                            offers an array of events such as folk music nights, live music events, beer & cider festivals, and an everchanging
+                            offers an array of events such as folk music nights, beer & cider festivals, and an everchanging
                             selection of real ales and ciders, continuing a long-standing tradition.
                         </p>
                         <p>
@@ -48,7 +48,7 @@ const Home = () => {
                         </p>
                         <p>
                             The Star&#39;s garden lounge and back section of the garden are perfect for private events, accommodating up to
-                            40 people with no hire charge and a £100 deposit. Please note that there is a minimum requirement of 20
+                            50 people with no hire charge and a £100 deposit. Please note that there is a minimum requirement of 20
                             people for private events.
                         </p>
                         <p>

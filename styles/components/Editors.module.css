@@ -12,7 +12,6 @@
     min-width: 310px;
     margin: 0 auto;
     background-color: #FFF;
-    padding: 2rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -21,7 +20,7 @@
 
 .form_control {
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 2rem auto 2rem 2rem;
 }
 
 .form_control label {
@@ -37,6 +36,7 @@
 .editor_form button {
     padding: 0.8rem;
     width: 25%;
+    min-width: 157.2px;
     margin: 0;
     text-align: center;
     background-color: #000;
@@ -46,3 +46,21 @@
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 400px) {
+    .editor_form {
+        width: 100%;
+        margin: 0 0;
+        min-width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form_control {
+        width: 80%;
+    }
+
+    .form_control input {
+        max-width: 100%;
+    }
+}
