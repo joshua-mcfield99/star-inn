@@ -8,7 +8,7 @@
 }
 
 .toggled.event_editor {
-    max-height: 100vh; /* Remove the maximum height restriction when toggled */
+    max-height: 200vh; /* Remove the maximum height restriction when toggled */
 }
 
 .toggle {
