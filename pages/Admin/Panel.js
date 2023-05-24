@@ -36,7 +36,7 @@ const Panel = () => {
 
     return (
         <main className={`${styles.panel_container}`}>
-            <h1>Admin Panel</h1>
+            <h1 className={`${styles.heading}`}>Admin Panel</h1>
             <div className={`${styles.editor_menu} ${isOpen ? styles.open_menu : ''}`}>
                 <div className={`${styles.mobile_toggle}`} onClick={handleToggle}>
                     <div className={`${styles.toggle_text}`}>
