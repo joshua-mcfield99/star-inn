@@ -46,6 +46,11 @@
     border-radius: 10px;
 }
 
+.upload_info {
+    height: fit-content;
+    margin: 1rem 0 0;
+}
+
 @media only screen and (max-width: 400px) {
     .editor_form {
         width: 100%;
