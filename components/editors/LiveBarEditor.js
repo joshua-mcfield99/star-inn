@@ -73,7 +73,7 @@ const LiveBarEditor = () => {
                 {message && <div>{message}</div>}
                 {imageUrl && 
                     <CloudinaryContext cloudName="drkqjlsvr">
-                        <Image src={imageUrl} alt="Uploaded Image" />
+                        <Image src={imageUrl} alt="Uploaded Image" width='100%'/>
                     </CloudinaryContext>
                 }
             </div>
