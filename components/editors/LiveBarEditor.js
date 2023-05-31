@@ -70,7 +70,7 @@ const LiveBarEditor = () => {
                 </div>
             </form>
             <div className={`${styles.upload_info}`}>
-                {message && <div>{message}</div>}
+                {message && <div className={`${styles.info_message}`}>{message}</div>}
                 {imageUrl && 
                     <CloudinaryContext cloudName="drkqjlsvr">
                         <Image src={imageUrl} alt="Uploaded Image" width='100%'/>
