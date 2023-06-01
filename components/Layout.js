@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 import Footer from './Footer'
 import Nav from './Nav'
 import { Josefin_Sans } from 'next/font/google'
@@ -11,10 +12,24 @@ const josefinSans = Josefin_Sans({
 })
 
 const Layout = ( {children} ) => {
+    const router = useRouter();
+    const { pathname } = router;
+    
+    const showVideo = pathname === '/'; // Set the condition for displaying the video
     return (
         <div className={josefinSans.className}>
+            {showVideo && (
+                <div className={`video_container`}>
+                    <div className={`${'overlay'}`}></div>
+                    <video src="/StarPromo.mp4" autoPlay loop muted />
+                    <div className={`arrow_container`}>
+                        <div className={`${'arrow'} ${'a_left'}`}></div>
+                        <div className={`${'arrow'} ${'a_right'}`}></div>
+                    </div>
+                </div>
+            )}
             <Nav/>
-            { children }
+                { children }
             <Footer/>
         </div>
     )

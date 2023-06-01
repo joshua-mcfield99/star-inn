@@ -105,7 +105,7 @@
         flex-direction: column;
         width: 100%;
         height: fit-content;
-        z-index: 98;
+        z-index: 96;
         transition: 1000ms;
         padding-bottom: 1rem;
     }
@@ -136,7 +136,7 @@
         height: 80px;
         background-color: #000;
         cursor: pointer;
-        z-index: 99;
+        z-index: 96;
     }
 
     .toggle_text {
