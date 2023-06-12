@@ -66,7 +66,7 @@ const ContactForm = () => {
     const sendJobApplication = async (data) => {
         console.log('function called:', data);
         try {
-            const response = await fetch("https://www.starinngodalming.co.uk/.netlify/functions/send-job-application", {
+            const response = await fetch("https://www.starinngodalming.co.uk/.netlify/functions/send-contact-form", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
