@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { CloudinaryContext, Image } from 'cloudinary-react'
+import { Image } from 'cloudinary-react'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import { Cormorant_Unicase } from 'next/font/google'
@@ -20,15 +20,12 @@ const Home = () => {
                 <section className={`${styles.welcome}`}>
                     <div className={`${styles.welcome_inner}`}>
                         <div className={`${styles.home_logo}`}>
-                            {//<CloudinaryContext cloud_name='drkqjlsvr'>
-                                <Image
-                                    cloudName='drkqjlsvr'
-                                    publicID='thestar/starLogo'
-                                    alt='The Star Logo'
-                                    width='100%'
-                                />
-                            //</CloudinaryContext>
-                            }
+                            <Image
+                                cloudName='drkqjlsvr'
+                                publicID='thestar/starLogo'
+                                alt='The Star Logo'
+                                width='100%'
+                            />
                         </div>
                         <h1 className={`${'heading'} ${cormorantUnicase.className}`}>Welcome!</h1>
                         <p>
@@ -58,15 +55,12 @@ const Home = () => {
                             unique tavern!
                         </p>
                         <div className={`${styles.welcome_img}`}>
-                            {//<CloudinaryContext cloud_name='drkqjlsvr'>
-                                <Image
-                                    cloudName='drkqjlsvr'
-                                    publicID='thestar/team'
-                                    alt='The Star staff'
-                                    width='100%'
-                                />
-                            //</CloudinaryContext>
-                            }
+                            <Image
+                                cloudName='drkqjlsvr'
+                                publicID='thestar/team'
+                                alt='The Star staff'
+                                width='100%'
+                            />
                         </div>
                     </div>
                 </section>

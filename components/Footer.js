@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../styles/Footer.module.css'
 import Link from 'next/link'
 import AuthContext from '@/context/auth-context';
-import { Image, CloudinaryContext } from 'cloudinary-react';
+import { Image } from 'cloudinary-react';
 
 
 const Footer = () => {
@@ -16,14 +16,13 @@ const Footer = () => {
 
                             <div className={[styles.main_section]}>
                                 <div className={`${styles.logo} ${styles.footer_section}`}>
-                                    <CloudinaryContext cloud_name='drkqjlsvr'>
-                                        <Image
-                                            publicId='thestar/StarLogo_white'
-                                            alt='The Star logo'
-                                            width='100%'
-    
-                                        />
-                                    </CloudinaryContext>
+                                    <Image
+                                        cloudName='drkqjlsvr'
+                                        publicId="thestar/StarLogo_white" 
+                                        secure="true"
+                                        alt="The Star logo"
+                                        width="100%"
+                                    />
                                 </div>
                                 <div className={`${styles.links} ${styles.footer_section}`}>
                                     {!context.token && 
