@@ -22,7 +22,7 @@ const JoinUs = () => {
         <Head>
             <title>The Star | Join Us</title>
         </Head>
-        <Container maxW="none" bg="#f8f1e7" paddingTop="2rem" paddingBottom="2rem">
+        <Container maxW="none" bg="#f8f1e7" paddingTop="0" paddingBottom="2rem">
             <main >
                 <section >
                     <h1 className={`${'heading'} ${cormorantUnicase.className}`} >Work at the Star</h1>

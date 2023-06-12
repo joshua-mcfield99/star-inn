@@ -39,9 +39,11 @@ const Footer = () => {
                                         </ul>
                                     }
                                 </div>
-                                <div className={`${styles.socials} ${styles.footer_section}`}>
+                                {
+                                //<div className={`${styles.socials} ${styles.footer_section}`}>
 
-                                </div>
+                                //</div>
+                                }
                             </div>
                             <div className={styles.copyright}>
                                 <p>Copyright 2023 The Star inn</p>

@@ -17,14 +17,17 @@ const Layout = ( {children} ) => {
     
     const showVideo = pathname === '/'; // Set the condition for displaying the video
     return (
-        <div className={josefinSans.className}>
+        <div className={`${josefinSans.className} ${'page'}`}>
             {showVideo && (
                 <div className={`video_container`}>
                     <div className={`${'overlay'}`}></div>
                     <video src="/StarPromo.mp4" autoPlay loop muted />
-                    <div className={`arrow_container`}>
-                        <div className={`${'arrow'} ${'a_left'}`}></div>
-                        <div className={`${'arrow'} ${'a_right'}`}></div>
+                    <div className={`instructions`}>
+                        <p>Scroll down</p>
+                        <div className={`arrow_container`}>
+                            <div className={`${'arrow'} ${'a_left'}`}></div>
+                            <div className={`${'arrow'} ${'a_right'}`}></div>
+                        </div>
                     </div>
                 </div>
             )}

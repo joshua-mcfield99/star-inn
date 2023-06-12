@@ -5,7 +5,6 @@
     text-decoration: none;
     list-style: none;
     font-size: 20px;
-    color: black;
     line-height: 1.4rem;
 }
 
@@ -106,14 +105,27 @@ section {
     max-height: 90vh;
 }
 
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
 .arrow_container {
     position: relative;
-    width: 100%;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.instructions p {
+    margin: 0;
+    color: #FFF;
 }
 
 .arrow {
@@ -126,14 +138,22 @@ section {
 
 .a_left {
     position: relative;
-    left: 4px;
+    left: 4.5px;
     transform: rotate(40deg);
 }
 
 .a_right {
     position: relative;
-    left: -4px;
+    left: -4.5px;
     transform: rotate(-40deg);
+}
+
+.page {
+    background: #f8f1e7;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 650px) {
