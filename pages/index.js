@@ -20,13 +20,15 @@ const Home = () => {
                 <section className={`${styles.welcome}`}>
                     <div className={`${styles.welcome_inner}`}>
                         <div className={`${styles.home_logo}`}>
-                            <CloudinaryContext cloud_name='drkqjlsvr'>
+                            {//<CloudinaryContext cloud_name='drkqjlsvr'>
                                 <Image
+                                    cloudName='drkqjlsvr'
                                     publicID='thestar/starLogo'
                                     alt='The Star Logo'
                                     width='100%'
                                 />
-                            </CloudinaryContext>
+                            //</CloudinaryContext>
+                            }
                         </div>
                         <h1 className={`${'heading'} ${cormorantUnicase.className}`}>Welcome!</h1>
                         <p>
@@ -56,13 +58,15 @@ const Home = () => {
                             unique tavern!
                         </p>
                         <div className={`${styles.welcome_img}`}>
-                            <CloudinaryContext cloud_name='drkqjlsvr'>
+                            {//<CloudinaryContext cloud_name='drkqjlsvr'>
                                 <Image
+                                    cloudName='drkqjlsvr'
                                     publicID='thestar/team'
                                     alt='The Star staff'
                                     width='100%'
                                 />
-                            </CloudinaryContext>
+                            //</CloudinaryContext>
+                            }
                         </div>
                     </div>
                 </section>
