@@ -33,7 +33,7 @@ const GalleryEditor = () => {
         const { signature } = response.data;
         
         const formData = new FormData();
-        formData.append('file', selectedImage, 'LiveBarImage');
+        formData.append('file', selectedImage);
         formData.append('upload_preset', 'eclcmxqa');
         formData.append('signature', signature);
         formData.append('api_key', '585686486369695');

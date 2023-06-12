@@ -19,7 +19,6 @@ const GalleryPage = ({ images }) => {
         thumbnailWidth: image.width,
         thumbnailHeight: image.height,
     }));
-    console.log(galleryImages);
     return (
         <>
             <Head>
@@ -63,7 +62,6 @@ const GalleryPage = ({ images }) => {
                         height
                     };
                 });
-                    console.log(images);
                 return {
                     props: { images }
                 };
