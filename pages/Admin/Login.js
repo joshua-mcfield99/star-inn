@@ -80,7 +80,6 @@ const AdminLogin = () => {
             </div>
             <div className={`${styles.form_control}`}>
                 <button type='submit' style={{margin: '0.5rem 0'}}>Login</button>
-                <p>Button disabled</p>
             </div>
         </form>)}
         
