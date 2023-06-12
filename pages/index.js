@@ -23,7 +23,8 @@ const Home = () => {
                             <Image
                                 cloudName='drkqjlsvr'
                                 publicID='thestar/starLogo'
-                                alt='The Star Logo'
+                                secure="true"
+                                alt='The Star'
                                 width='100%'
                             />
                         </div>
@@ -58,6 +59,7 @@ const Home = () => {
                             <Image
                                 cloudName='drkqjlsvr'
                                 publicID='thestar/team'
+                                secure="true"
                                 alt='The Star staff'
                                 width='100%'
                             />

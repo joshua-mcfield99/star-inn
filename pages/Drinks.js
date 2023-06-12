@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../styles/Drinks.module.css'
 import { Cormorant_Unicase } from 'next/font/google'
 import altText from '../data/liveBarAlts.json'
-import { CloudinaryContext, Image } from 'cloudinary-react';
+import { Image } from 'cloudinary-react';
 
 const cormorantUnicase = Cormorant_Unicase({
     subsets: ['latin'],
@@ -31,13 +31,13 @@ const Drinks = () => {
                 We&#39;re all about keeping things fresh and up-to-date, but during peak hours, it can be a challenge. Our ales have a tendency to change throughout the day, so even if we&#39;ve made updates, accuracy can still be a bit elusive. Rest assured, though, we&#39;re here to make your experience amazing!
                 </p>
                 <div className={`${styles.live_img}`}>
-                    <CloudinaryContext cloudName='drkqjlsvr'>
                         <Image
+                            cloudName='drkqjlsvr'
                             publicID='livebarimage/LiveBarImage'
+                            secure="true"
                             width='100%'
                             alt='This is our live bar image, It should show our current selection of ales.'
                         />
-                    </CloudinaryContext>
                 </div>
             </section>
         </main>
