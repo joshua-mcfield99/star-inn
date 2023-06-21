@@ -59,15 +59,16 @@ const Contact = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div className={`${styles.inner_section}`}>
-                            <h2 className={`${'heading'} ${cormorantUnicase.className}`} >GBW (Godalming Beer Works)</h2>
-                            <p>Want to find out more about our microbrewery? You can contact us on the email below!</p>
-                            <div className={`${styles.detail_card}`} >
-                                <h3 className={`${cormorantUnicase.className}`} >Email:</h3>
-                                <p>info@godalming.beer</p>
-                            </div>
-                        </div>
+                        </div>{
+                        //<div className={`${styles.inner_section}`}>
+                        //    <h2 className={`${'heading'} ${cormorantUnicase.className}`} >GBW (Godalming Beer Works)</h2>
+                        //    <p>Want to find out more about our microbrewery? You can contact us on the email below!</p>
+                        //    <div className={`${styles.detail_card}`} >
+                        //        <h3 className={`${cormorantUnicase.className}`} >Email:</h3>
+                        //        <p>info@godalming.beer</p>
+                        //    </div>
+                        //</div>
+                        }
                         <div>
                             <h2 className={`${'heading'} ${cormorantUnicase.className}`} >Get in touch</h2>
                             <p>
