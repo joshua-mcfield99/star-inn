@@ -18,4 +18,5 @@
 
 .detail_card p {
     margin-bottom: 0.8rem;
+    user-select: text;
 }
