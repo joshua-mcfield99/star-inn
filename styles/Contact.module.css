@@ -20,3 +20,13 @@
     margin-bottom: 0.8rem;
     user-select: text;
 }
+
+@media only screen and (max-width: 630px) {
+    .details_container {
+        flex-wrap: wrap;
+    }
+
+    .detail_card {
+        margin: 0 auto 10px 10px;
+    }
+}

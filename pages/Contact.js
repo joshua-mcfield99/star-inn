@@ -58,6 +58,12 @@ const Contact = () => {
                                         01483 417 717
                                     </p>
                                 </div>
+                                <div className={`${styles.detail_card}`}>
+                                    <h3 className={`${cormorantUnicase.className}`}>Email:</h3>
+                                    <p>
+                                        stargodalming@gmail.com
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className={`${styles.inner_section}`}>
