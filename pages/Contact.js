@@ -27,7 +27,7 @@ const Contact = () => {
                         <p>
                             Welcome to our Contacts page! Here, you will find our location and contact details, including our phone number and email address. We are always happy to hear from you, so please don&#39;t hesitate to reach out if you have any questions or feedback.
                         </p>
-                        <h2 className={`${'heading'} ${cormorantUnicase.className}`}>Loaction</h2>
+                        <h2 className={`${'heading'} ${cormorantUnicase.className}`}>Location</h2>
                         <p>
                             Nestled in the heart of the enchanting town of Godalming, Surrey, lies The Star inn - a true gem amongst the historic buildings and scenic views. As you wander down Church Street, keep an eye out for the distinctive pepper pot, and you&#39;ll find The Star just a stone&#39;s throw away. With its charming ambiance and welcoming atmosphere, The Star is the perfect place to relax and indulge in some delicious food and drinks after a day of exploring the town&#39;s stunning surroundings.
                         </p>
