@@ -19,6 +19,7 @@ const Home = () => {
             <main>
                 <section className={`${styles.welcome}`}>
                     <div className={`${styles.welcome_inner}`}>
+                        <p className={styles.winner}><strong>We are proud to announce that we have won Camra Surrey and Hants Borders Pub of the Year 2024!</strong></p>
                         <div className={`${styles.home_logo}`}>
                             <Image
                                 cloudName='drkqjlsvr'
