@@ -37,6 +37,9 @@ const Panel = () => {
     return (
         <main className={`${styles.panel_container}`}>
             <h1 className={`${styles.heading}`}>Admin Panel</h1>
+            {
+            // The toggle menu stopped working on mobile for some reason it works on my pc when changing the device in developer tools but not on my phone  
+            /*
             <div className={`${styles.editor_menu} ${isOpen ? styles.open_menu : ''}`}>
                 <div className={`${styles.mobile_toggle}`} onClick={handleToggle}>
                     <div className={`${styles.toggle_text}`}>
@@ -54,8 +57,36 @@ const Panel = () => {
                     <p className={`${styles.editor_select} ${currentEditor === 'menus' ? styles.active : ''}`} id='menus' onClick={handleSelect}>Menus</p>
                     <p className={`${styles.editor_select} ${currentEditor === 'events' ? styles.active : ''}`} id='events' onClick={handleSelect}>Events</p>
                 </div>
+            </div>*/
+            }
+            <div className={`${styles.editor_container}`}>
+                    <h2>Live bar editor</h2>
+                    <div className={`${styles.editor_component}`}>
+                        <LiveBarEditor />
+                    </div>
             </div>
-            {currentEditor === 'livebar' ? 
+            <div className={`${styles.editor_container}`}>
+                    <h2>Gallery editor</h2>
+                    <div className={`${styles.editor_component}`}>
+                        <GalleryEditor />
+                    </div>
+            </div>
+            <div className={`${styles.editor_container}`}>
+                    <h2>Menus editor</h2>
+                    <div className={`${styles.editor_component}`}>
+                        <MenuEditor />
+                    </div>
+            </div>
+            <div className={`${styles.editor_container}`}>
+                    <h2>Events editor</h2>
+                    <div className={`${styles.editor_component}`}>
+                        <EventEditor />
+                    </div>
+            </div>
+            
+            {
+            // The toggle menu stopped working on mobile for some reason it works on my pc when changing the device in developer tools but not on my phone
+            /*currentEditor === 'livebar' ? 
             (
                 <div className={`${styles.editor_container}`}>
                     <h2>Live bar editor</h2>
@@ -84,7 +115,7 @@ const Panel = () => {
                         <EventEditor />
                     </div>
                 </div>    
-            ) : (null)}
+            ) : (null)*/}
         </main>
     )
 }
